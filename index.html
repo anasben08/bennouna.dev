@@ -93,7 +93,8 @@
 
       .socials {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
@@ -146,20 +147,22 @@
   <div class="box text">
     <p>
       Hi, I'm Anas Bennouna, a computer science student at
-      <a href="https://www.people.epfl.ch/409771">EPFL</a>.
+      <a href="https://people.epfl.ch/409771">EPFL</a>.
     </p>
   </div>
 </div>
 
 
- <div class="flex-container">
-      <div class="flex-item">
-        <h2>Socials</h2>
-        <a class="box social" href="https://github.com/anasben08">GitHub</a>
-        <a class="box social" href="https://www.linkedin.com/in/anas-bennouna">LinkedIn</a>
-         <a class="box social" href="https://www.people.epfl.ch/409771">EPFL</a>
-      </div>
+<div class="flex-container">
+  <div class="flex-item">
+    <h2>Socials</h2>
+    <div class="socials">
+      <a class="box social" href="https://github.com/anasben08">GitHub</a>
+      <a class="box social" href="https://www.linkedin.com/in/anas-bennouna">LinkedIn</a>
+      <a class="box social" href="https://people.epfl.ch/409771">EPFL</a>
     </div>
+  </div>
+</div>
 
     <div class="flex-container">
       <!-- projects -->
