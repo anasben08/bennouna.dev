@@ -1,0 +1,76 @@
+:root {
+  color-scheme: dark;
+  --muted: #8a8a8a;
+  --line: #444;
+}
+
+body {
+  max-width: 60rem;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  font: 24px/1.6 ui-monospace, Menlo, Monaco, monospace;
+  background: #121212;
+  color: #e6e6e6;
+}
+
+a { color: LinkText; }
+a:visited { color: VisitedText; }
+a:hover { color: ActiveText; text-decoration: none; }
+
+h1 { text-align: center; }
+h1::before { content: "> "; }
+h1::after { content: "_"; animation: blink 1s steps(1) infinite; }
+h2::before { content: "## "; }
+h1::before, h2::before { color: var(--muted); }
+
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  h1::after { animation: none; }
+}
+
+.profile, .socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.profile { align-items: center; justify-content: center; }
+
+.profile img {
+  display: block;
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.profile .text {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--line);
+  max-width: 36rem;
+}
+
+.profile .text p {
+  margin: 0;
+}
+.socials a::before { content: "[ "; }
+.socials a::after { content: " ]"; }
+.socials a::before, .socials a::after { color: var(--muted); }
+
+.center { text-align: center; }
+
+.gif {
+  display: block;
+  width: min(100%, 480px);
+  height: auto;
+  margin: 2rem auto;
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--muted);
+}
